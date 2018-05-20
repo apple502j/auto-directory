@@ -12,11 +12,15 @@ import re
 import requests
 import github3
 from bs4 import BeautifulSoup
-from settings import USERNAME, PASSWORD, REPOSITORY
 
 FORUM = "https://scratch.mit.edu/discuss/5/"
 
 REMOVE_BLANK_LINES = re.compile("\n{2,}")
+
+with open('settings.txt') as f:
+    USERNAME = f.readline().strip()
+    PASSWORD = f.readline().strip()
+    REPOSITORY = f.readline().strip()
 
 def categorize(title):
     """ Return category """

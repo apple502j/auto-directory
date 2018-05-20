@@ -1,6 +1,0 @@
-""" Settings """
-
-USERNAME = ""
-PASSWORD = ""
-
-REPOSITORY = ""
